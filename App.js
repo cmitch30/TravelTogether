@@ -3,6 +3,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screens/HomeScreen";
 import TripScreen from "./screens/TripScreen";
+import CreateTripForm from './components/CreateTripForm'
+import TripDetails from "./components/TripDetails";
+import Itinerary from "./components/Itinerary";
+import AddActivityForm from "./components/AddActivityForm";
 
 const Stack = createStackNavigator();
 
@@ -12,6 +16,10 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Trip" component={TripScreen} />
+        <Stack.Screen name="CreateTripForm" component={CreateTripForm} />
+        <Stack.Screen name="TripDetails" component={TripDetails} />
+        <Stack.Screen name="Itinerary" component={Itinerary} />
+        <Stack.Screen name="AddActivityForm" component={AddActivityForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );
